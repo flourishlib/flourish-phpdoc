@@ -1,0 +1,23 @@
+/core.assemble_plugin_filepath.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.assign_smarty_interface.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.create_dir_structure.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.display_debug_console.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.get_include_path.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.get_microtime.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.get_php_resource.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.is_secure.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.is_trusted.php/1.2/Tue Apr 24 21:52:37 2007//
+/core.load_plugins.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.load_resource_plugin.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.process_cached_inserts.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.process_compiled_include.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.read_cache_file.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.rm_auto.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.rmdir.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.run_insert_handler.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.smarty_include_php.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.write_cache_file.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.write_compiled_include.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.write_compiled_resource.php/1.1/Mon Oct 17 18:37:40 2005//
+/core.write_file.php/1.1/Mon Oct 17 18:37:40 2005//
+D
