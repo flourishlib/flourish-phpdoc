@@ -19,7 +19,7 @@ $current_dir = dirname(__file__);
 
 $bin                = $current_dir . '/pear/PhpDocumentor/phpdoc';
 $pdepend_bin        = $current_dir . '/pear/pdepend';
-$source_dir         = $current_dir . '/../flourish-classes/';
+$source_dir         = $current_dir . '/../classes/';
 $output_dir         = $tmp_dir . 'output/';
 $depend_output_dir  = $output_dir . 'depend/';
 $phpdoc_output_dir  = $output_dir . 'phpdoc';
@@ -41,7 +41,7 @@ if (!file_exists($export_dir)) {
 
 $start = microtime(TRUE);
 
-`cp -R $current_dir/../flourish-classes/* $export_dir/`;
+`cp -R $current_dir/../classes/* $export_dir/`;
 
 $phpdepend_start = microtime(TRUE);
 echo "Running PHP_Depend...";
