@@ -42,5 +42,6 @@ if (ob_get_level()) {
 	ob_end_clean(); // make output from autofind php code disapear
 }
 ini_set('date.timezone', 'America/New_York');
+ini_set('error_reporting', 30719);
 include "phpDocumentor/phpdoc.inc";
 ?>
