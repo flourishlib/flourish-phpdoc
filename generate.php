@@ -237,8 +237,8 @@ foreach ($docs as $doc) {
 	$content = preg_replace('#<dd>in file [a-z0-9_\-\.]+(?:\.class)?\.php, #im', '<dd><em>', $content);
 	$content = preg_replace('#<br />&nbsp;&nbsp;&nbsp;&nbsp;#im', '</em><br />', $content);
 	
-	$content = preg_replace('#(<p>(?:(?!</p>).)*?)<([uo]l)>#ims', '\1</p><\2>', $content);
-	$content = preg_replace('#</([uo]l)>((?:(?!</p>).)*)</p>#ims', '</\1><p>\2</p>', $content);
+	$content = preg_replace('#(<p>(?:.(?!</p>))*?)<([uo]l)>#ims', '\1</p><\2>', $content);
+	$content = preg_replace('#</([uo]l)>((?:.(?!</p>))*)</p>#ims', '</\1><p>\2</p>', $content);
 	
 	$content = preg_replace('#<p>\s*</p><([uo]l)>#im', '<\1>', $content);
 	$content = preg_replace('#</([uo]l)><p>\s*</p>#im', '</\1>', $content);
