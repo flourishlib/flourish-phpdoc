@@ -237,8 +237,8 @@ foreach ($docs as $doc) {
 	$content = preg_replace('#<dd>in file [a-z0-9_\-\.]+(?:\.class)?\.php, #im', '<dd><em>', $content);
 	$content = preg_replace('#<br />&nbsp;&nbsp;&nbsp;&nbsp;#im', '</em><br />', $content);
 	
-	$content = preg_replace('#(<p>(.(?!</p>))*?)<([uo]l)>#ims', '\1</p><\3>', $content);
-	$content = preg_replace('#</([uo]l)>((.(?!</p>))*)</p>#ims', '</\1><p>\2</p>', $content);
+	$content = preg_replace('#(<p>(?:(?!</p>).)*?)<([uo]l)>#ims', '\1</p><\2>', $content);
+	$content = preg_replace('#</([uo]l)>((?:(?!</p>).)*)</p>#ims', '</\1><p>\2</p>', $content);
 	
 	$content = preg_replace('#<p>\s*</p><([uo]l)>#im', '<\1>', $content);
 	$content = preg_replace('#</([uo]l)><p>\s*</p>#im', '</\1>', $content);
@@ -256,7 +256,7 @@ foreach ($docs as $doc) {
 		$content = preg_replace('#<div class="description">(.*?)</div>#i', strtr($matches[1], array('\\' => '\\\\', '$' => '\\$')), $content);
 	}
 	
-	preg_match('#(<div class="changes"><strong>Changes:</strong> )((;(?:(?:(?!&\w{2,7};)[^;])+|&\w{2,7};)+;)+)</div>#im', $content, $matches);
+	preg_match('#(<div class="changes"><strong>Changes:</strong> )((;(?:(?:[^&;]+|(?!&\w{2,7};)&)+|&\w{2,7};)+;)+)</div>#im', $content, $matches);
 	if ($matches && $matches[2]) {
 		$changes = explode(';;', substr($matches[2], 1, -1));
 		$changes = array_reverse($changes);
@@ -270,7 +270,7 @@ foreach ($docs as $doc) {
 			$replacement .= '<tr><th>' . $version . '</th><td>' . $changes_made . '</td></tr>';
 		}
 		$replacement .= '</table></div>';
-		$content = preg_replace('#<div class="changes"><strong>Changes:</strong> ((;(?:(?:(?!&\w{2,7};)[^;])+|&\w{2,7};)+;)+)</div>#im', strtr($replacement, array('\\' => '\\\\', '$' => '\\$')), $content);
+		$content = preg_replace('#<div class="changes"><strong>Changes:</strong> ((;(?:(?:[^&;]+|(?!&\w{2,7};)&)+|&\w{2,7};)+;)+)</div>#im', strtr($replacement, array('\\' => '\\\\', '$' => '\\$')), $content);
 	}
 	
 	preg_match('#(<div class="todo"><strong>Todo:</strong> )((;[^;]+;)+)</div>#im', $content, $matches);
